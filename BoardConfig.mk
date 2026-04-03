@@ -124,9 +124,7 @@ BOARD_MAIN_PARTITION_LIST := \
     system_ext \
     product \
     vendor \
-    odm \
     vendor_dlkm \
-    odm_dlkm
 
 
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
