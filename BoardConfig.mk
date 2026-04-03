@@ -14,7 +14,6 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     system \
     system_ext \
-    product \
     vendor \
     vendor_dlkm \
     boot \
@@ -122,7 +121,6 @@ BOARD_SUPER_IMAGE_IN_UPDATE_PACKAGE := true
 BOARD_MAIN_PARTITION_LIST := \
     system \
     system_ext \
-    product \
     vendor \
     vendor_dlkm \
 
@@ -193,7 +191,7 @@ BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
-BOARD_AVB_VBMETA_SYSTEM := product system_ext system
+BOARD_AVB_VBMETA_SYSTEM := system_ext system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 1
