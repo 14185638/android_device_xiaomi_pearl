@@ -10,10 +10,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-ifeq ($(WITH_GMS),true)
-    # 请务必检查你的 vendor/ 下是否存在这个目录，MindTheGapps 常见的入口如下：
-    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-endif
 # Inherit from pearl device
 $(call inherit-product, device/xiaomi/pearl/device.mk)
 
