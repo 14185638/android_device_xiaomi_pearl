@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github_pearl" fetch="https://github.com" />
+    <remote name="gitlab_pearl" fetch="https://gitlab.com" />
+
+    <project path="device/xiaomi/pearl"
+             name="14185638/android_device_xiaomi_pearl"
+             remote="github_pearl"
+             revision="lineage-22.2" />
+
+    <project path="vendor/xiaomi/pearl"
+             name="14185638/android_vendor_xiaomi_pearl"
+             remote="github_pearl"
+             revision="main" />
+
+    <project path="kernel/xiaomi/mt6895"
+             name="14185638/android_kernel_xiaomi_mt6895"
+             remote="github_pearl"
+             revision="dev" />
+
+    <project path="vendor/mediatek/ims"
+             name="Xiaomi-Pearl-Development/android_vendor_mediatek_ims"
+             remote="github_pearl"
+             revision="android-16" />
+
+    <project path="hardware/xiaomi"
+             name="XagaForge/android_hardware_xiaomi"
+             remote="github"
+             revision="15" />
+
+    <project path="hardware/mediatek"
+             name="XagaForge/android_hardware_mediatek"
+             remote="github_pearl"
+             revision="15" />
+
+    <project path="device/mediatek/sepolicy_vndr"
+             name="XagaForge/android_device_mediatek_sepolicy_vndr"
+             remote="github_pearl"
+             revision="15" />
+
+    <project path="vendor/gapps"
+             name="MindTheGapps/vendor_gapps"
+             remote="gitlab_pearl"
+             revision="vic" />
+    </manifest>
