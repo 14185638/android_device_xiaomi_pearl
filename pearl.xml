@@ -25,7 +25,7 @@
 
     <project path="hardware/xiaomi"
              name="XagaForge/android_hardware_xiaomi"
-             remote="github"
+             remote="github_pearl"
              revision="15" />
 
     <project path="hardware/mediatek"
