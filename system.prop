@@ -3,3 +3,10 @@ persist.sys.fuse.passthrough.enable=true
 
 # HWUI
 debug.hwui.skia_atrace_enabled=false
+
+# FM Radio configuration
+ro.fm.chip=0x6635
+ro.fm.band=3
+ro.fm.low_band=875
+ro.fm.high_band=1080
+ro.fm.seek_space=10
