@@ -11,14 +11,14 @@ set -eo pipefail
 
 # --- 配置区 -----------------------------------------------------------
 export USE_CCACHE=1
-export CCACHE_DIR=/run/media/admin/565d494e-b6bb-406f-9549-995c855bda33/CCACHE/
+export CCACHE_DIR=
 export CCACHE_EXEC=/usr/bin/ccache
 export CCACHE_MAXSIZE=80G
 
 LINEAGE_VER="22.2"
 BUILD_DATE=$(date +%Y%m%d)
 KEY_DIR=".android-certs"
-MY_TMP="/run/media/admin/565d494e-b6bb-406f-9549-995c855bda33/TMP/"
+MY_TMP=""
 PAYLOAD_DUMPPER="payload-dummper/payload-dumper-go"
 OUTPUT_BASE="Android-ROMs"
 RAW_TARGET_ZIP="out/dist/lineage_pearl-target_files-admin.zip"
