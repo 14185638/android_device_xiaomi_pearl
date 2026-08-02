@@ -1,0 +1,6 @@
+cc_library_shared {
+    name: "libmisight",
+    srcs: ["libmisight_stub.cpp"],
+    shared_libs: ["liblog"],
+    vendor: true,
+}

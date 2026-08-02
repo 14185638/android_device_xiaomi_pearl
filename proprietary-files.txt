@@ -27,6 +27,7 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libfvaudio.so
 vendor/lib64/libmiresample.so
 vendor/lib64/libmispowerop.so
+vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkshifter_vendor.so
@@ -745,7 +746,6 @@ vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/firmware/mali_csffw.bin
 vendor/firmware/mali_csffw_reload.bin
-vendor/lib/egl/egl.cfg
 vendor/lib64/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -911,6 +911,14 @@ vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
+vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_hidl_plugin.so:vendor/lib64/libcodec2_hidl_plugin-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_soft_common.so:vendor/lib64/libcodec2_soft_common-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk-v31.so;FIX_SONAME
+vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME
+system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-v35.so;FIX_SONAME
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
@@ -1295,3 +1303,4 @@ vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
 
 # Miscellaneous
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
+

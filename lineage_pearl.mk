@@ -37,7 +37,7 @@ TARGET_BOOT_ANIMATION_RES := 1920
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint="Xiaomi/pearl/pearl:15/AP3A.240905.015.A2/OS2.0.207.0.VLHCNXM:user/release-keys"
+    BuildFingerprint="Redmi/pearl/pearl:15/AP3A.240905.015.A2/OS3.0.3.0.VLHCNXM:user/release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Xiaomi/pearl/pearl:15/AP3A.240905.015.A2/OS2.0.207.0.VLHCNXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/pearl/pearl:15/AP3A.240905.015.A2/OS3.0.3.0.VLHCNXM:user/release-keys

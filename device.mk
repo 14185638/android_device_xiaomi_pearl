@@ -71,21 +71,35 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
+    audio.r_submix.default \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
     MtkInCallService
 
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libhapticgenerator \
+    libldnhncr \
+    libreverbwrapper \
+    libvisualizer
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
+
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
+TARGET_EXCLUDES_AUDIOFX := true
 
 # Boot Control
 PRODUCT_PACKAGES += \
@@ -329,6 +343,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
 
+# Lineage VNDK compat libs
+PRODUCT_PACKAGES += \
+    libutils-v32 \
+    android.hardware.sensors@1.0-convert-shared \
+    libui-v34 \
+    libmisight
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -337,6 +358,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
+    hardware/lineage/compat \
     hardware/mediatek/libmtkperf_client
 
 # Vibrator
