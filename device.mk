@@ -7,6 +7,9 @@
 # Inherit generic_ramdisk product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# MIUI Camera
+$(call inherit-product, vendor/xiaomi/miuicamera-pearl/device.mk)
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -120,7 +123,7 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek-mali
+    android.hardware.memtrack-service.mediatek
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -192,6 +195,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.insmod.sh \
     init.insmod.mt6895.cfg
+
+# Touchscreen firmware, also needed in recovery where /vendor is not mounted
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_nt36672e_l16s_fw01.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_nt36672e_l16s_fw01.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_nt36672e_l16s_fw02.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_nt36672e_l16s_fw02.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_nt36672e_l16s_mp01.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_nt36672e_l16s_mp01.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_nt36672e_l16s_mp02.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_nt36672e_l16s_mp02.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_ts_fw01.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_ts_fw01.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_ts_fw02.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_ts_fw02.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_ts_mp01.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_ts_mp01.bin \
+    $(LOCAL_PATH)/../../../vendor/xiaomi/pearl/proprietary/vendor/firmware/novatek_ts_mp02.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/novatek_ts_mp02.bin
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -371,6 +385,9 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Wi-Fi
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_baklava_qpr0_struct,true)
+
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \

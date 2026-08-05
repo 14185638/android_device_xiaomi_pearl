@@ -33,6 +33,11 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
+# Use pearl's USB gadget configuration instead of the generic MediaTek rc.
+SOONG_CONFIG_NAMESPACES += mediatek_gadget
+SOONG_CONFIG_mediatek_gadget += use_custom_usb_gadget_rc
+SOONG_CONFIG_mediatek_gadget_use_custom_usb_gadget_rc := true
+
 # Boot Image
 BOARD_KERNEL_BASE         := 0x3fff8000
 BOARD_KERNEL_OFFSET       := 0x00008000
@@ -221,3 +226,4 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Inherit the proprietary files
 include vendor/xiaomi/pearl/BoardConfigVendor.mk
+include vendor/xiaomi/miuicamera-pearl/BoardConfig.mk
