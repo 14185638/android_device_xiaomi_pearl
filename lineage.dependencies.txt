@@ -17,7 +17,7 @@
   {
     "repository": "Xiaomi-Pearl-Development/android_kernel_xiaomi_mt6895",
     "target_path": "kernel/xiaomi/mt6895",
-    "branch": "lts"
+    "branch": "lineage-23.2"
   },
   {
     "repository": "Xiaomi-Pearl-Development/android_hardware_xiaomi",
