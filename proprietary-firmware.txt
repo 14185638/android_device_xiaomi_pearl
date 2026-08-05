@@ -1,25 +1,23 @@
-## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OS2.0.207.0.VLHCNXM (pearl)
-# Unpinned blobs from missi-user 15 AP3A.240905.015.A2 OS2.0.207.0.VLHCNXM release-keys
+# Firmware from Xiaomi/pearl/missi:15/AP3A.240905.015.A2/OS3.0.3.0.VLHCNXM:user/release-keys
 
-dtbo.img;AB
+dtbo.img;AB|29bf140fdc7ed2574602421fbff4452335f4a318
 # Firmware blobs
-apusys.img;AB|9afcbb21cf55e6b23278fd069ccda4c60ccc32fa
-audio_dsp.img;AB|1507673d08072000a314ba1968ef02a094afaa18
-ccu.img;AB|9265da98bb5fc5ef9a92c364090c5a9d1f3ee9d8
-dpm.img;AB|e2337a6318934e105a4c4ab39c2136a6deaefa96
-gpueb.img;AB|0068f84c726abb0897ebd2559f237d3b2947ffd4
-gz.img;AB|1544220e2e8c78427cb4ced090191564838488d9
-lk.img;AB|b86004ceb975f1bed6c62de0fff20916c2a117d9
-mcf_ota.img;AB|65f95bf37275ddaf58fa111d58e44ea27819c1d2
-mcupm.img;AB|09f3cb177688cf6480bbcea2bac9f10f61699328
-md1img.img;AB|b0aed0a3f65fd39efb53a9a1883ec9ad1f250ceb
-mvpu_algo.img;AB|5dce1ccbe669ac5c1a1b1beb5c716d17883c9822
-pi_img.img;AB|2d67c70742c5d61192805d214fee95cb22c81c66
-scp.img;AB|223271a32dbfb7e0642c7c097b668ce6aa8cc8cb
-spmfw.img;AB|3f272fdfece8a6177577a8ab74a935b1c0fe0ea9
-sspm.img;AB|cfcc0a4308b39e8e69921873a19ee95315d3c748
-tee.img;AB|c38a3d5d1b950b99ecffd4c8f5cd5c5513dad05b
-vcp.img;AB|d4f765039039edb229c5301961ced31be5bb2c50
-preloader_pearl.bin:preloader_raw.img;AB|ba111d466883b73906bbe79f050b9f51756b7e70
-logo.bin:logo.img;AB|49f4ae411a840932394ee4d295aebabfce8af901
+apusys.img;AB|08d40d84a6306a2ae2455b0cdbca1f2f30c0ff13
+audio_dsp.img;AB|e6cceb9c5b2a0e383810dde34c7c6f0890811d4e
+ccu.img;AB|02902fde8cd76c3f0787f6d80f5ddfadc4e0140f
+dpm.img;AB|2be91b1f9dd1c60948a583bc598805043db35d43
+gpueb.img;AB|6e8b828fa812695d48473574f6a0566bb1557aa2
+gz.img;AB|648d355aef658cd7ee8df8bb7137310cdd6726c4
+lk.img;AB|47c60719bc6db8fbe099dea7af154d6e20ccd6d7
+mcf_ota.img;AB|8ef5e345a69cab4d8fd6de9c006838cb3072bf97
+mcupm.img;AB|da991a6b01eafe8ce65cb0b6f040d9b61f830280
+md1img.img;AB|5410af40467d3b981debe905e2fe9ea86199393f
+mvpu_algo.img;AB|973f6b9cc429247517a28615b4f8d66172c76877
+pi_img.img;AB|bcf000861b7540f5fe54430d5f2c36f8fa293021
+scp.img;AB|f90b1a948bce1f48f15889e3ec830572911d0505
+spmfw.img;AB|1e030a8ef5c187bf2e7e0e34ed4d5c4dd3ea3ff1
+sspm.img;AB|6f04878886138d5acb7a43dbd3bc7662213b5ef1
+tee.img;AB|62111adf412230fd6348c15403880550e26ce69d
+vcp.img;AB|b5cf7b79156e2cec3cd00f98443e7a0feb314f6a
+preloader_pearl.bin:preloader_raw.img;AB|566b02654b368b655b6045c3fc48090c534c2422
+logo.bin:logo.img;AB|93126ccf572eaafa16704a999abd8f4c31dcf9c7
