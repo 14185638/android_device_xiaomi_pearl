@@ -349,6 +349,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# ChipInfo
+PRODUCT_PACKAGES += \
+        chipinfo
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-subhal-impl-1.0 \
