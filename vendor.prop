@@ -235,6 +235,7 @@ ro.vendor.mtk.sensor.support=yes
 
 # SOC
 ro.soc.manufacturer=Mediatek
+ro.vendor.soc.model=MT6896
 
 # SF
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
@@ -284,6 +285,3 @@ ro.vendor.wlan.gen=gen4m_6895
 
 # Zygote
 zygote.critical_window.minute=10
-
-# Soc
-ro.vendor.soc.model=MT6896
