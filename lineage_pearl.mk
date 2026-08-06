@@ -41,3 +41,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Redmi/pearl/pearl:15/AP3A.240905.015.A2/OS3.0.3.0.VLHCNXM:user/release-keys
+
+# GMS (Google Mobile Services), enabled when WITH_GMS=true (see build.sh)
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif

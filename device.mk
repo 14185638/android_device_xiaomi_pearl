@@ -414,3 +414,4 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/pearl/pearl-vendor.mk)
+PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
