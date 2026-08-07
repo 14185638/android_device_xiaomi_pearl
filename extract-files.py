@@ -188,6 +188,20 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/public.libraries.txt': blob_fixup()
         .add_line_if_missing('libmpbase.so'),
 
+    ('vendor/lib/libnvram.so',
+     'vendor/lib/libsysenv.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
+
+    'vendor/lib/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_createFromHandle')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_unlock')
+        .add_needed('libbase_shim.so'),
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
