@@ -270,6 +270,11 @@ debug.sf.treat_170m_as_sRGB=1
 # Thermal
 ro.vendor.mtk_thermal_2_0=1
 
+# Soter
+# Match stock: keep SoterService on the HIDL v1.0 path (api_level < 34),
+# otherwise newer SoterService versions look for a non-existent AIDL daemon
+ro.board.first_api_level=31
+
 # TEE
 ro.hardware.gatekeeper=mitee
 ro.hardware.wechat=mitee
