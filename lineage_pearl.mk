@@ -29,9 +29,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # ROM Flags
 WITH_GMS := false
 
-# Animation
-PERF_ANIM_OVERRIDE := true
-
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1920
 
