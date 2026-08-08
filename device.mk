@@ -415,3 +415,9 @@ PRODUCT_COPY_FILES += \
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/pearl/pearl-vendor.mk)
 PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
+
+# Use the device keys for the Bluetooth sepolicy context so the Bluetooth
+# certificate in mac_permissions.xml matches the one used to sign the
+# Bluetooth APK. Otherwise com.android.bluetooth gets the default seinfo
+# and zygote fails to set its SELinux context, breaking Bluetooth.
+PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := .android-certs/
