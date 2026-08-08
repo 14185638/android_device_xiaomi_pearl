@@ -140,6 +140,11 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio \
+    FmRecordingsProvider
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi
