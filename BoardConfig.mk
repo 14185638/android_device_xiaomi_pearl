@@ -33,6 +33,18 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
+# 32-bit application compatibility
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a55
+
+# Keep the vendor audio HAL service 64-bit while supporting 32-bit apps.
+SOONG_CONFIG_NAMESPACES += android_hardware_audio
+SOONG_CONFIG_android_hardware_audio += run_64bit
+SOONG_CONFIG_android_hardware_audio_run_64bit := true
+
 # Use pearl's USB gadget configuration instead of the generic MediaTek rc.
 SOONG_CONFIG_NAMESPACES += mediatek_gadget
 SOONG_CONFIG_mediatek_gadget += use_custom_usb_gadget_rc
