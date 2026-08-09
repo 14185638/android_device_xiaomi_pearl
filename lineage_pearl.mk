@@ -26,8 +26,8 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# ROM Flags
-WITH_GMS := false
+# ROM Flags (set via environment, see build.sh; ?= lets WITH_GMS=true take effect)
+WITH_GMS ?= false
 
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1920
