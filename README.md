@@ -18,3 +18,16 @@ Display | 1080 x 2460 pixels, 6.6 inches, Dobly Vision, IPS LCD
 
 ## Device picture
 ![Redmi Note 12T Pro](https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202305291422_e96776c7e1e35cebb454457c3344d3cd.png)
+
+## Device tree structure
+
+This tree inherits the MT6895 SoC-common layer:
+
+- `device/xiaomi/mt6895-common` (board config + product makefile + shared configs/sepolicy/native sources)
+- `vendor/xiaomi/mt6895-common` (SoC-common proprietary blobs, extracted from yuechu OS3.0.10.0)
+
+This tree keeps the pearl-specific parts: camera stack, NFC, IR, FM radio,
+Radio/IMS, keymint/MITEE/TEE stack and touch firmware (Novatek). No Dolby DAP
+engine (pearl ships only the Dolby Vision display post-processing blobs).
+Run `./extract-files.py` inside `device/xiaomi/mt6895-common` first, then
+`./extract-files.py` here, to regenerate the vendor trees.

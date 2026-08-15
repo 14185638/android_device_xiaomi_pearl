@@ -14,6 +14,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from pearl device
 $(call inherit-product, device/xiaomi/pearl/device.mk)
 
+# Keep the unrelated Yuechu device tree and its vendor tree out of this product's Soong graph.
+PRODUCT_SOURCE_ROOT_DIRS += -device/xiaomi/yuechu -vendor/xiaomi/yuechu
+
 PRODUCT_DEVICE := pearl
 PRODUCT_NAME := lineage_pearl
 PRODUCT_BRAND := Redmi
