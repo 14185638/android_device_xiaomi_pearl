@@ -20,6 +20,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/pearl',
+    'device/xiaomi/mt6895-common',
+    'vendor/xiaomi/mt6895-common',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'hardware/xiaomi',
@@ -210,7 +212,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
+    add_firmware_proprietary_file=False,
 )
 
 if __name__ == '__main__':

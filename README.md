@@ -1,5 +1,5 @@
 # Device tree for Redmi Note 12T Pro (pearl)
-The Redmi Note 12T Pro (codenamed _"pearl"_) is a high-end, mid-range smartphone from Xiaomi.
+The Redmi Note 12T Pro (codenamed _"pearl"_) is a mid-range smartphone from Xiaomi.
 
 It was announced on 2023, May 29. Release date was 2023, June 01.
 
