@@ -51,6 +51,10 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/mt6895/libmtkcam_request_requlator.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
 
+    'vendor/lib64/mt6895/libmtkcam_pipeline.so': blob_fixup()
+        .sig_replace('88 0b 00 34 28 01 0a 2a 1f 05 00 71 21 0b 00 54', '1f2003d528010a2a1f0500711f2003d5')
+        .sig_replace('28 2c 40 39 e8 0a 00 34', '282c40391f2003d5'),
+
     ('vendor/lib64/mt6895/lib3a.flash.so',
      'vendor/lib64/mt6895/lib3a.sensors.color.so',
      'vendor/lib64/mt6895/lib3a.sensors.flicker.so'): blob_fixup()
