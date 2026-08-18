@@ -16,8 +16,8 @@ PRODUCT_COPY_FILES += \
 
 # Dolby (DAP engine, ported from yuechu OS3.0.10.0). Effect libs come from
 # the proprietary blob list, registered in audio_effects.xml.
-PRODUCT_PACKAGES += \
-    XiaomiDolby
+#PRODUCT_PACKAGES += \
+#    XiaomiDolby
 
 # libdlbdsservice.so (in the dms daemon) pulls in libsqlite -> libandroidicu ->
 # libicuuc/libicui18n, which only ship inside the com.android.i18n APEX that
