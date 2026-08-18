@@ -111,3 +111,9 @@ PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
 # Bluetooth APK. Otherwise com.android.bluetooth gets the default seinfo
 # and zygote fails to set its SELinux context, breaking Bluetooth.
 PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := .android-certs/
+
+
+# use pearl-specific OS3 c2store (disable the shared/default one for pearl only)
+
+# pearl-only: use OS3 c2store via the shared hook (default for others = common src)
+$(call soong_config_set, xiaomi_pearl, c2store_src64, pearl)
