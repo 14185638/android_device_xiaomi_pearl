@@ -10,3 +10,6 @@ ro.fm.band=3
 ro.fm.low_band=875
 ro.fm.high_band=1080
 ro.fm.seek_space=10
+
+# OTA Updater
+lineage.updater.uri=https://ota.a14185638.top/api/v2/devices/{device}/builds
