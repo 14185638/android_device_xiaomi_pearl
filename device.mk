@@ -16,8 +16,8 @@ PRODUCT_COPY_FILES += \
 
 # Dolby (DAP engine, ported from yuechu OS3.0.10.0). Effect libs come from
 # the proprietary blob list, registered in audio_effects.xml.
-PRODUCT_PACKAGES += \
-    XiaomiDolby
+#PRODUCT_PACKAGES += \
+#    XiaomiDolby
 
 # libdlbdsservice.so (in the dms daemon) pulls in libsqlite -> libandroidicu ->
 # libicuuc/libicui18n, which only ship inside the com.android.i18n APEX that
@@ -104,3 +104,16 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/pearl/pearl-vendor.mk)
+PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
+
+# Use the device keys for the Bluetooth sepolicy context so the Bluetooth
+# certificate in mac_permissions.xml matches the one used to sign the
+# Bluetooth APK. Otherwise com.android.bluetooth gets the default seinfo
+# and zygote fails to set its SELinux context, breaking Bluetooth.
+PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := .android-certs/
+
+
+# use pearl-specific OS3 c2store (disable the shared/default one for pearl only)
+
+# pearl-only: use OS3 c2store via the shared hook (default for others = common src)
+$(call soong_config_set, xiaomi_pearl, c2store_src64, pearl)

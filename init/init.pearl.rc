@@ -26,3 +26,9 @@ on boot
     enable mtk-secure-element-hal-service
     enable vendor.secure-element
     enable vendor.sensors-hal-multihal
+
+# The camera HAL creates the dual-camera calibration file with 0600
+# cameraserver:audio, but the MIUI camera app (running as platform_app)
+# reads it directly. Make it world-readable once boot completes.
+on property:sys.boot_completed=1
+    chmod 0644 /data/vendor/camera/com.xiaomi.dcal.wu.data
