@@ -857,6 +857,10 @@ vendor/lib64/hw/sensors.elliptic@2.0.so|bf970cc62de5d77b592dbfd655515c312689ba55
 vendor/lib64/hw/sensors.mius.proximity.so|e0b97988177e118716aea7767b879bcd76e10f50
 vendor/lib64/libnotifyaudiohal.so;FIX_SONAME|a02f3e44bb5e84760925722ae3e9c66957e94c9d|fe4ea475de5a45ee1c1ebb0f4c05c2a6827b53f8
 vendor/lib64/libultrasound.so|3e51203a1b8400162268c9338c42cb5006dc2ee7
+
+# Sensors configs
+vendor/etc/sensors/hals.conf|a1ff6fda6753b4298fec58e2f8fcef6c521b09a2|b90b178c8541116ffb422fe827710bffa19fc12a
+
 product/app/SoterService/SoterService.apk|80fbb0d303235c133d0495158c4e349e678d3f4d
 vendor/bin/soterd|63f0a2e65cbe619e4eca474aec8e9d6eff8327ec
 vendor/etc/init/vendor.xiaomi.hardware.soterservice@1.0-service.rc|e68bb21d6245a3a92b16add463ffc78d1ed79e6b
